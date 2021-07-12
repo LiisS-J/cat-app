@@ -1,8 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: antiquewhite;
 }
 
-a {
+/* a {
   color: #00B7FF;
+} */
+
+.main-content {
+    background: url("/images/jae-park-7GX5aICb5i4-unsplash.jpg");
+    background-size: contain;
+    height: 600px;
 }
