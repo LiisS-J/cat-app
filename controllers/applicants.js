@@ -24,11 +24,14 @@ function addNewApplicant(req, res) {
 // }
 
 function createNewApplicant(req, res) {
+    // Instead of trying to associate an applicant with a cat by looking up 
+    // a cat FIRST, what we only need to do is to create a new applicant,
+    // and save the cat ID (from the URL [req.params.id]) as part of the
+    // req.body.
     Cat.findById(req.params.id, function (err, cat) {
-        console.log(` THIS IS WHERE APPLICANTS SHOULD BE -->${applicants}`);
-        cat.applicants.push(req.body);
+        // Not needed: cat.applicants.push(req.body);
         cat.save(function(err) {
-            res.redirect(`/${cat._id}`);
+            res.redirect(`/cats/${cat._id}`);
         })
     });
 }

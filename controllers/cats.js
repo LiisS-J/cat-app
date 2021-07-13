@@ -1,10 +1,15 @@
 const Cat = require('../models/cat');
 
-// function showLandingPg(req, res) {
-//     res.render('cats/landingPg', {
-//         title: 'Happy Paws Adoption'
-//     });
-// };
+function createACat(req, res) {
+    const cat = new Cat(req.body);
+    cat.save(function (err) {
+        if(err) {
+            console.log(err);
+            return newCat(req, res);
+        }
+        res.redirect('cats');
+    });
+}
 
 function addNewCat(req, res) {
     res.render('cats/newCatForm', {
@@ -33,5 +38,6 @@ function showSingleCat(req, res){
 module.exports = {
     index: showAllCats,
     new: addNewCat,
+    create: createACat,
     show: showSingleCat
 };

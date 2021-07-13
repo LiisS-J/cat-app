@@ -6,8 +6,9 @@ const catsCtrl = require('../controllers/cats');
 
 router.get('/', catsCtrl.index);
 
-// This route goes to the new cat form that the admin uses to add a new cat for adoption
-// Figure out how to implement it as an admin(hidden from the user)
+// this route shows new cats that have been added through the adoption form
+router.post('/', catsCtrl.create);
+
 
 // This route directs the inserted cat form data into all adoptable cats view
 

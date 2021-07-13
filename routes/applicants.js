@@ -3,9 +3,9 @@ const router = express.Router();
 const applicantsCtrl = require('../controllers/applicants');
 
 // This routes the visitor to the application form
-router.get('/:id/adopt/new', applicantsCtrl.new);
+router.get('/cats/:id/adopt/new', applicantsCtrl.new);
 
-// This route posts applicants form into the individual cat's page
-router.post('/:id', applicantsCtrl.create);
+// This route posts applicants form into the individual cat's
+router.post('/cats/:id', applicantsCtrl.create);
 
 module.exports = router;
