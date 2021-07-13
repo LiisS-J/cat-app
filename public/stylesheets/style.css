@@ -10,6 +10,22 @@ body {
 
 .main-content {
     background: url("/images/jae-park-7GX5aICb5i4-unsplash.jpg");
-    background-size: contain;
+    background-size: cover;
     height: 600px;
+    border: 1px solid black;
+}
+
+/* nav {
+    border-bottom: 1px solid red;
+    width: 30%;
+    margin-left: calc(10%/6);
+    padding: 1.2em 0;
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bolder;
+    font-size: 1em;
+} */
+
+img {
+    width: 30%;
+    margin: calc(10%/6);
 }

@@ -7,6 +7,7 @@ require('dotenv').config();
 require('./config/cats');
 
 
+var indexRouter = require('./routes/index');
 var catsRouter = require('./routes/cats');
 
 var app = express();
@@ -21,7 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', catsRouter);
+app.use('/', indexRouter);
+app.use('/cats', catsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

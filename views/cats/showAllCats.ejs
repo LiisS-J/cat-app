@@ -1,0 +1,39 @@
+<%- include('../partials/header') %>
+
+<div>
+    <h1>This is where all the cats up for adoption will be displayed</h1>
+</div>
+
+<tbody>
+    <% cats.forEach(function(cat) { %>
+        <tr>
+            <td>
+                <%= cat.name %>
+            </td>
+            <td>
+                <%= cat.sex %>
+            </td>
+            <td>
+                <%= cat.age %>
+            </td>
+            <td>
+                <%= cat.breed %>
+            </td>
+            <td>
+                <%= cat.healthCondition %> 
+            </td>
+        </tr>
+        <% }); %>
+</tbody>
+    <!-- <img src=""><img 
+     src=""><img 
+     src="">
+<img src=""><img 
+     src=""><img 
+     src="">
+<img src=""><img 
+     src=""><img 
+     src="">
+</body> -->
+
+<%- include('../partials/footer') %>
