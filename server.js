@@ -7,8 +7,9 @@ require('dotenv').config();
 require('./config/cats');
 
 
-var indexRouter = require('./routes/index');
-var catsRouter = require('./routes/cats');
+const indexRouter = require('./routes/index');
+const catsRouter = require('./routes/cats');
+const applicantsRouter = require('./routes/applicants');
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/cats', catsRouter);
+app.use('/', applicantsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

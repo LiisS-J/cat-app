@@ -21,19 +21,17 @@ function showAllCats(req, res) {
     });
 }
 
-    // function createNewCat(req, res) {
-    //     const cat = new Cat(req.body);
-    //     cat.save(function(err) {
-    //         if (err) {
-    //             console.log(err)
-    //             return createNewCat(req, res);
-    //         }
-    //         console.log(cat)
-    //         res.redirect('/cats');
-    //     });
-    // }
+function showSingleCat(req, res){
+    Cat.findById(req.params.id, function(err, cat) {
+        res.render('cats/showSingleCat', {
+            title: 'Cat',
+            cat
+        });
+    });
+}
 
 module.exports = {
     index: showAllCats,
-    new: addNewCat
+    new: addNewCat,
+    show: showSingleCat
 };
