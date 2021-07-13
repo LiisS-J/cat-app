@@ -5,12 +5,12 @@
 </div>
 
 <tbody>
-    <!-- <div class="eachCat"></div> -->
-    <% cats.forEach(function(cat) { %>
     
+    <% cats.forEach(function(cat) { %>
+        <div class="eachCat">
         <tr>
             <td>
-                <% cat._id %> 
+                <%= cat._id %> 
             </td>
             <td>
                 <%= cat.name %>
@@ -31,12 +31,16 @@
                 <%= cat.adoptionStatus %> 
             </td>
         </tr>
+        <tr>
+            <div id="meetCat">
+                <a href="/cats/<%= cat._id %> ">Meet Me!</a>
+            </div>
+        </tr>
         <% }); %>
-
-        <div id="meetCat">
-            <a href="/cats/:id">Meet Me!</a>
-        </div>
-    <!-- </div> -->
+    </div>
+    <div id="addCat">
+        <a href="/cats/new">For Admins only!</a>
+    </div>
 </tbody>
     <!-- <img src=""><img 
      src=""><img 

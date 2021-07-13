@@ -1,5 +1,32 @@
 <h2>This is where our single kitty information shows up =)</h2>
 
+<section>
+    <div>
+        Photo:
+    </div>
+    <div>
+        ID: <%= cat._id %> 
+    </div>
+    <div>
+        Name: <%= cat.name %> 
+    </div>
+    <div>
+        Sex: <%= cat.sex %> 
+    </div>
+    <div>
+        Breed: <%= cat.breed %> 
+    </div>
+    <div>
+        Health Condition: <%= cat.healthCondition %> 
+    </div>
+    <div>
+        Adoption Status: <%= cat.adoptionStatus %> 
+    </div>
+    <div>
+        Applicants: <%= cat.applicants %> 
+    </div>
+</section>
+
 <div id="adoptCat">
-    <a href="adopt/new">Adopt Me!</a>
+    <a href="/cats/<%= cat._id %>/adopt/new">Adopt Me!</a>
 </div>

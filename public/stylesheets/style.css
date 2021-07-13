@@ -32,7 +32,5 @@ img {
 
 /* .eachCat {
     border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    position: absolute;
+    display: grid;
 } */
