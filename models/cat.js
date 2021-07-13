@@ -6,7 +6,8 @@ const catSchema = new Schema({
     sex: String,
     age: Number,
     breed: String,
-    healthCondition: String
+    healthCondition: String,
+    adoptionStatus: String
 });
 
 module.exports = mongoose.model('Cat', catSchema);

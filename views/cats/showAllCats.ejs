@@ -5,7 +5,9 @@
 </div>
 
 <tbody>
+    <!-- <div class="eachCat"></div> -->
     <% cats.forEach(function(cat) { %>
+    
         <tr>
             <td>
                 <% cat._id %> 
@@ -25,8 +27,16 @@
             <td>
                 <%= cat.healthCondition %> 
             </td>
+            <td>
+                <%= cat.adoptionStatus %> 
+            </td>
         </tr>
         <% }); %>
+
+        <div id="meetCat">
+            <a href="/cats/:id">Meet Me!</a>
+        </div>
+    <!-- </div> -->
 </tbody>
     <!-- <img src=""><img 
      src=""><img 
