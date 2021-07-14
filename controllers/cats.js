@@ -64,11 +64,21 @@ function updateCatEntry(req, res) {
     )
 }
 
+function editCatEntry(req, res) {
+    Cat.findById(req.params.id, function (err, cat) {
+        res.render('cats/editCatForm', {
+            title: 'Update Cat Entry',
+            cat
+        })
+    }) 
+}
+
 module.exports = {
     index: showAllCats,
     new: addNewCat,
     create: createACat,
     show: showSingleCat,
     delete: deleteCatEntry,
-    update: updateCatEntry
+    update: updateCatEntry,
+    edit: editCatEntry
 };

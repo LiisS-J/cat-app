@@ -16,4 +16,6 @@ router.delete('/:id', catsCtrl.delete);
 
 router.put('/:id', catsCtrl.update);
 
+router.get('/:id/edit', catsCtrl.edit);
+
 module.exports = router;

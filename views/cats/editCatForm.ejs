@@ -1,0 +1,58 @@
+<%- include('../partials/header') %>
+
+<h2>Edit Cat Entry</h2>
+
+<form action="/cats/<%= cat._id %>?_method=put" method="POST">
+
+    <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+    </p>
+    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+    <p><img id="output" width="200" /></p>
+    <div>
+        <label for="name">
+            Name:
+            <input type="text" name="name" value="<%= cat.name %>">
+        </label>
+    </div>
+    <div>
+        <label for="sex">
+            Sex: 
+            <input type="text" name="sex" value="<%= cat.sex %>">
+        </label>
+    </div>
+    <div>
+        <label for="age">
+            Age: 
+            <input type="number" name="age" value="<%= cat.age %>">
+        </label>
+    </div>
+    <div>
+        <label for="breed">
+            Breed:  
+            <input type="text" name="breed" value="<%= cat.breed %>">
+        </label>
+    </div>
+    <div>
+        <label for="health">
+            Health Condition:  
+            <input type="text" name="health" value="<%= cat.health %>">
+        </label>
+    </div>
+    <div>
+        <label for="adoptionStatus">
+            Adoption Status: 
+            <input type="text" name="adoptionStatus" value="<%= cat.adoptionStatus %>">
+        </label>
+    </div>
+    <input type="submit" value="Update Cat">
+</form>
+
+
+<script>
+    var loadFile = function (event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
+
+<%- include('../partials/footer') %>

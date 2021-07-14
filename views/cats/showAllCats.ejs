@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <div>
-    <h1>This is where all the cats up for adoption will be displayed</h1>
+    <h1>Meet our kitties!</h1>
 </div>
 
 <tbody>
@@ -10,25 +10,25 @@
         <div class="eachCat">
         <tr>
             <td>
-                <%= cat._id %> 
+                ID: <%= cat._id %> 
             </td>
             <td>
-                <%= cat.name %>
+                Name: <%= cat.name %>
             </td>
             <td>
-                <%= cat.sex %>
+                Sex: <%= cat.sex %>
             </td>
             <td>
-                <%= cat.age %>
+                Age: <%= cat.age %>
             </td>
             <td>
-                <%= cat.breed %>
+                Breed: <%= cat.breed %>
             </td>
             <td>
-                <%= cat.healthCondition %> 
+                Health Condition: <%= cat.health %> 
             </td>
             <td>
-                <%= cat.adoptionStatus %> 
+                Adoption status: <%= cat.adoptionStatus %> 
             </td>
         </tr>
         <tr>

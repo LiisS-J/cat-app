@@ -6,7 +6,7 @@ const catSchema = new Schema({
     sex: String,
     age: Number,
     breed: String,
-    healthCondition: String,
+    health: String,
     adoptionStatus: String,
 });
 

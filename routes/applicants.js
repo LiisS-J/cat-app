@@ -6,7 +6,7 @@ const applicantsCtrl = require('../controllers/applicants');
 router.get('/cats/:id/adopt/new', applicantsCtrl.new);
 
 // This route posts applicants form into the individual cat's
-router.post('/cats/:id', applicantsCtrl.create);
+router.post('/cats/:id/applicant', applicantsCtrl.create);
 
 router.delete('/cats/:id/applicant/:applicantId', applicantsCtrl.delete);
 
