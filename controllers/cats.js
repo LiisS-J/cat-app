@@ -1,4 +1,5 @@
 const Cat = require('../models/cat');
+const Applicant = require('../models/applicant');
 
 function createACat(req, res) {
     const cat = new Cat(req.body);
@@ -28,9 +29,12 @@ function showAllCats(req, res) {
 
 function showSingleCat(req, res){
     Cat.findById(req.params.id, function(err, cat) {
+        Applicant.find({cat: cat._id}, function(err, applicants) {
         res.render('cats/showSingleCat', {
             title: 'Cat',
-            cat
+            cat,
+            applicants
+            });
         });
     });
 }

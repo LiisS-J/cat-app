@@ -23,7 +23,16 @@
         Adoption Status: <%= cat.adoptionStatus %> 
     </div>
     <div>
-        Applicants: <%= cat.applicants %> 
+        Applicants for this cat:
+        <%= applicants.length %>
+        <% applicants.forEach(function(a) { %>
+             <div>
+                <%= a._id %> 
+            </div>
+            <div>
+                <%= a.name %>
+            </div>
+        <% }); %>
     </div>
 </section>
 
