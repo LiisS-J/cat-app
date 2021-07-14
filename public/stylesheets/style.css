@@ -1,36 +1,68 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: antiquewhite;
+    font-family: 'Maven Pro', sans-serif;
 }
 
-/* a {
-  color: #00B7FF;
-} */
-
-.main-content {
-    background: url("/images/jae-park-7GX5aICb5i4-unsplash.jpg");
+.landingPage {
+    background: url(/images/jae-park-7GX5aICb5i4-unsplash.jpg);
     background-size: cover;
-    min-height: 1500px;
-    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-position-y: -50px;
+    height: 700px;
+    max-width: 550px;
+    margin: 0px 50px;
+    position: relative;
 }
 
-/* nav {
-    border-bottom: 1px solid red;
-    width: 30%;
-    margin-left: calc(10%/6);
-    padding: 1.2em 0;
-    font-family: 'Major Mono Display', monospace;
-    font-weight: bolder;
-    font-size: 1em;
-} */
-
-img {
-    width: 30%;
-    margin: calc(10%/6);
+.sub-content {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-/* .eachCat {
-    border: 1px solid black;
-    display: grid;
-} */
+#site-name {
+    background: white;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 5px;
+    width: 300px;
+    height: fit-content;
+}
+
+#site-name h2 {
+    margin: 5px;
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+#site-link {
+    border: 2px solid white;
+    border-radius: 5px;
+    background: white;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+a:link { 
+    text-decoration: none;
+    color: black; 
+}
+
+a:visited { 
+    text-decoration: none;
+    color: black; 
+}
+
+a:hover { 
+    text-decoration: none; 
+}
+
+a:active { 
+    text-decoration: none;
+    color: black; 
+}

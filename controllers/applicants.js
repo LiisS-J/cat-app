@@ -29,7 +29,6 @@ function deleteApplicant(req, res) {
     Applicant.findByIdAndDelete(req.params.applicantId, function (err, applicant) {
         if (err) {
             console.log(err);
-            res.redirect(`/cats/${req.params.id}`);
         }
         res.redirect(`/cats/${req.params.id}`);
     });
