@@ -1,8 +1,7 @@
 <h2>Meet <%= cat.name %></h2>
 
 <section>
-    <div>
-        Photo: <%= cat.image %> 
+    <div class="catImage" style="background-image: url('<%= cat.imgUrl %>'); max-width: 250px; min-height: 250px; background-size: contain;">
     </div>
     <div>
         ID: <%= cat._id %> 

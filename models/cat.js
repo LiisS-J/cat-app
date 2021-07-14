@@ -8,6 +8,9 @@ const catSchema = new Schema({
     breed: String,
     health: String,
     adoptionStatus: String,
+    imgUrl: {
+        type: String,
+    }
 });
 
 module.exports = mongoose.model('Cat', catSchema);
