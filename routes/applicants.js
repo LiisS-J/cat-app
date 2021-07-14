@@ -8,4 +8,6 @@ router.get('/cats/:id/adopt/new', applicantsCtrl.new);
 // This route posts applicants form into the individual cat's
 router.post('/cats/:id', applicantsCtrl.create);
 
+router.delete('/cats/:id/applicant/:applicantId', applicantsCtrl.delete);
+
 module.exports = router;

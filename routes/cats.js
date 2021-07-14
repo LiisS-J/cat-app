@@ -6,20 +6,14 @@ const catsCtrl = require('../controllers/cats');
 
 router.get('/', catsCtrl.index);
 
-// this route shows new cats that have been added through the adoption form
 router.post('/', catsCtrl.create);
-
-
-// This route directs the inserted cat form data into all adoptable cats view
 
 router.get('/new', catsCtrl.new);
 
-
-// this route goes to an individual cat's detail page
 router.get('/:id', catsCtrl.show);
 
+router.delete('/:id', catsCtrl.delete);
 
-// this route goes to the adoption form
-// router.get('/adopt', catsCtrl.new);
+router.put('/:id', catsCtrl.update);
 
 module.exports = router;

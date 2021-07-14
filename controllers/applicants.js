@@ -1,7 +1,7 @@
 const Applicant = require('../models/applicant');
 const Cat = require('../models/cat');
 
- 
+
 
 function addNewApplicant(req, res) {
     Cat.findById(req.params.id, function (err, cat) {
@@ -15,8 +15,8 @@ function addNewApplicant(req, res) {
 function createNewApplicant(req, res) {
     req.body.cat = req.params.id;
     const applicant = new Applicant(req.body);
-    applicant.save(function(err) {
-        if(err) {
+    applicant.save(function (err) {
+        if (err) {
             console.log(err);
             return newApplicant(req, res)
         }
@@ -25,7 +25,18 @@ function createNewApplicant(req, res) {
     });
 }
 
+function deleteApplicant(req, res) {
+    Applicant.findByIdAndDelete(req.params.applicantId, function (err, applicant) {
+        if (err) {
+            console.log(err);
+            res.redirect(`/cats/${req.params.id}`);
+        }
+        res.redirect(`/cats/${req.params.id}`);
+    });
+}
+
 module.exports = {
     new: addNewApplicant,
-    create: createNewApplicant
+    create: createNewApplicant,
+    delete: deleteApplicant
 }

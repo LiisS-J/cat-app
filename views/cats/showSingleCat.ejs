@@ -22,16 +22,34 @@
     <div>
         Adoption Status: <%= cat.adoptionStatus %> 
     </div>
+    <form method="POST" action="/cats/<%= cat._id %>?_method=PUT">
+        <button type="submit">Update Cat Entry</button>
+    </form>
+    <form method="POST" action="/cats/<%= cat._id %>?_method=DELETE">
+        <button type="submit">Delete Cat Entry</button>
+    </form>
     <div>
         Applicants for this cat:
         <%= applicants.length %>
-        <% applicants.forEach(function(a) { %>
-             <div>
-                <%= a._id %> 
+        <% applicants.forEach(function(applicant) { %>
+            <div>
+                <%= applicant.name %>
             </div>
             <div>
-                <%= a.name %>
+                <%= applicant.age %>
             </div>
+            <div>
+                <%= applicant.address %>
+            </div>
+            <div>
+                Meets housing requirements: <%= applicant.homereq %>
+            </div>
+            <div>
+                Meets care requirements: <%= applicant.healthreq %>
+            </div>
+            <form method="POST" action="/cats/<%= cat._id %>/applicant/<%= applicant._id%>?_method=DELETE">
+                <button type="submit">Delete Applicant</button>
+            </form>
         <% }); %>
     </div>
 </section>
