@@ -1,42 +1,55 @@
 <%- include('../partials/header') %>
 
-    <div class="newCatForm">
+    <div class="form-content">
 
         <h1>Enter a new cat for adoption</h1>
 
-        <div>
-            <form action="/cats/" method="POST">
+        <form action="/cats/" method="POST">
+            <div>
                 <label for="imgUrl">
-                    URL to the cat photo:
+                    <b>URL to the cat photo:</b>
                     <input type="url" name="imgUrl">
                 </label>
+            </div>
+            <div>
                 <label for="name">
-                    Name:
+                    <b>Name:</b>
                     <input type="text" name="name">
                 </label>
+            </div>
+            <div>
                 <label for="sex">
-                    Sex:
+                    <b>Sex:</b>
                     <input type="text" name="sex">
                 </label>
+            </div>
+            <div>
                 <label for="age">
-                    Age:
+                    <b>Age:</b>
                     <input type="number" name="age">
                 </label>
+            </div>
+            <div>
                 <label for="breed">
-                    Breed:
+                    <b>Breed:</b>
                     <input type="text" name="breed">
                 </label>
+            </div>
+            <div>
                 <label for="health">
-                    Health Condition:
+                    <b>Health Condition:</b>
                     <input type="text" name="health">
                 </label>
+            </div>
+            <div>
                 <label for="adoptionStatus">
-                    Adoption Status:
+                    <b>Adoption Status:</b>
                     <input type="text" name="adoptionStatus">
                 </label>
-                <input type="submit" value="Add Cat">
-            </form>
-        </div>
+            </div>
+            <input type="submit" value="Add Cat">
+        </form>
+    </div>
     </div>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

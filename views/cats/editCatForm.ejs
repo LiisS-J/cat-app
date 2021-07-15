@@ -1,15 +1,16 @@
 <%- include('../partials/header') %>
 
-    <h1>Edit Cat Entry</h1>
-
     <div class="form-content">
+
+        <h1>Edit Cat Entry</h1>
+
         <div>
             <form action="/cats/<%= cat._id %>?_method=put" method="POST">
                 <div>
-                <label for="imgUrl">
-                    <b>Link to cat photo:</b>
-                    <input type="url" name="imgUrl">
-                </label>
+                    <label for="imgUrl">
+                        <b>Link to cat photo:</b>
+                        <input type="url" name="imgUrl" value="<%= cat.imgUrl %> ">
+                    </label>
                 </div>
                 <div>
                     <label for="name">

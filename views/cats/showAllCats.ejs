@@ -7,6 +7,9 @@
         <div class="allCats">
             <% cats.forEach(function(cat) { %>
                 <div class="eachCat">
+                    <div class="catImage"
+                        style="background-image: url('<%= cat.imgUrl %>'); max-width: 150px; min-height: 150px; background-size: cover;">
+                    </div>
                     <div>
                         <b>ID:</b>
                         <%= cat._id %>
@@ -35,11 +38,11 @@
                         <a href="/cats/<%= cat._id %> ">Meet Me!</a>
                     </div>
                 </div>
-                <% }); %>
+            <% }); %>
         </div>
 
         <div id="addCat">
-            <a href="/cats/new">Admins only!</a>
+            <a href="/cats/new">Admins only</a>
         </div>
     </div>
 
