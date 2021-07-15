@@ -2,51 +2,51 @@
 
     <h2>Edit Cat Entry</h2>
 
- <div>
-        <form action="/cats/<%= cat._id %>?_method=put" method="POST">
-            <label for="imgUrl">
-                URL to the cat photo:
-                <input type="url" name="imgUrl">
+    <div>
+        <div>
+            <form action="/cats/<%= cat._id %>?_method=put" method="POST">
+                <label for="imgUrl">
+                    URL to the cat photo:
+                    <input type="url" name="imgUrl">
+                </label>
+                <label for="name">
+                    Name:
+                    <input type="text" name="name" value="<%= cat.name %>">
+                </label>
+        </div>
+        <div>
+            <label for="sex">
+                Sex:
+                <input type="text" name="sex" value="<%= cat.sex %>">
             </label>
-            <label for="name">
-                Name:
-                <input type="text" name="name" value="<%= cat.name %>">
+        </div>
+        <div>
+            <label for="age">
+                Age:
+                <input type="number" name="age" value="<%= cat.age %>">
             </label>
+        </div>
+        <div>
+            <label for="breed">
+                Breed:
+                <input type="text" name="breed" value="<%= cat.breed %>">
+            </label>
+        </div>
+        <div>
+            <label for="health">
+                Health Condition:
+                <input type="text" name="health" value="<%= cat.health %>">
+            </label>
+        </div>
+        <div>
+            <label for="adoptionStatus">
+                Adoption Status:
+                <input type="text" name="adoptionStatus" value="<%= cat.adoptionStatus %>">
+            </label>
+        </div>
+        <input type="submit" value="Update Cat">
+        </form>
     </div>
-    <div>
-        <label for="sex">
-            Sex:
-            <input type="text" name="sex" value="<%= cat.sex %>">
-        </label>
-    </div>
-    <div>
-        <label for="age">
-            Age:
-            <input type="number" name="age" value="<%= cat.age %>">
-        </label>
-    </div>
-    <div>
-        <label for="breed">
-            Breed:
-            <input type="text" name="breed" value="<%= cat.breed %>">
-        </label>
-    </div>
-    <div>
-        <label for="health">
-            Health Condition:
-            <input type="text" name="health" value="<%= cat.health %>">
-        </label>
-    </div>
-    <div>
-        <label for="adoptionStatus">
-            Adoption Status:
-            <input type="text" name="adoptionStatus" value="<%= cat.adoptionStatus %>">
-        </label>
-    </div>
-    <input type="submit" value="Update Cat">
-    </form>
-</div>
-
     <script>
         var loadFile = function (event) {
             var image = document.getElementById('output');

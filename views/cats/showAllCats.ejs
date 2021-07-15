@@ -1,53 +1,46 @@
 <%- include('../partials/header') %>
 
-<div>
-    <h1>Meet our kitties!</h1>
-</div>
+    <div class="mainCatPage">
+        <div>
+            <h1>Meet our kitties!</h1>
+        </div>
+        <div class="allCats">
+            <% cats.forEach(function(cat) { %>
+                <div class="eachCat">
+                    <div>
+                        <b>ID:</b>
+                        <%= cat._id %>
+                    </div>
+                    <div>
+                        <b>Name:</b>
+                        <%= cat.name %>
+                    </div>
+                    <div>
+                        <b>Sex:</b>
+                        <%= cat.sex %>
+                    </div>
+                    <div>
+                        <b>Age:</b>
+                        <%= cat.age %>
+                    </div>
+                    <div>
+                        <b>Breed:</b>
+                        <%= cat.breed %>
+                    </div>
+                    <div>
+                        <b>Adoption status:</b>
+                        <%= cat.adoptionStatus %>
+                    </div>
+                    <div id="meetCat">
+                        <a href="/cats/<%= cat._id %> ">Meet Me!</a>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
 
-<tbody>
-    
-    <% cats.forEach(function(cat) { %>
-        <div class="eachCat">
-        <tr>
-            <td>
-                ID: <%= cat._id %> 
-            </td>
-            <td>
-                Name: <%= cat.name %>
-            </td>
-            <td>
-                Sex: <%= cat.sex %>
-            </td>
-            <td>
-                Age: <%= cat.age %>
-            </td>
-            <td>
-                Breed: <%= cat.breed %>
-            </td>
-            <td>
-                Adoption status: <%= cat.adoptionStatus %> 
-            </td>
-        </tr>
-        <tr>
-            <div id="meetCat">
-                <a href="/cats/<%= cat._id %> ">Meet Me!</a>
-            </div>
-        </tr>
-        <% }); %>
+        <div id="addCat">
+            <a href="/cats/new">For Admins only!</a>
+        </div>
     </div>
-    <div id="addCat">
-        <a href="/cats/new">For Admins only!</a>
-    </div>
-</tbody>
-    <!-- <img src=""><img 
-     src=""><img 
-     src="">
-<img src=""><img 
-     src=""><img 
-     src="">
-<img src=""><img 
-     src=""><img 
-     src="">
-</body> -->
 
 <%- include('../partials/footer') %>

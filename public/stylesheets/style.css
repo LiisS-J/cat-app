@@ -9,7 +9,7 @@ body {
     background-position-y: -50px;
     height: 700px;
     max-width: 550px;
-    margin: 0px 50px;
+    margin: 0px auto;
     position: relative;
 }
 
@@ -65,4 +65,41 @@ a:hover {
 a:active { 
     text-decoration: none;
     color: black; 
+}
+
+.allCats {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.eachCat {
+    border-left: 3px solid black;
+    border-bottom: 2px solid #3AA6DD;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 50px 10px;
+    width: 250px;
+    position: relative;
+}
+
+#meetCat {
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 5px;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+}
+
+#meetCat a {
+    color: #3AA6DD;
+    padding: 5px;
+}
+
+#meetCat:hover {
+    background-color: #3AA6DD;
+}
+
+#meetCat a:hover {
+    color: white;
 }
