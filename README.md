@@ -9,7 +9,7 @@ Whileas not fully built out, the app also allows the administrator to update cat
 ![Adoption form page](img/adoption_application.png)
 
 ####Technologies Used: 
-The app was built using HTML, CSS, Javascript, Node.js, Express, MongoDB and Mongoose
+The app was built using HTML, CSS, Node.js, Express, MongoDB and Mongoose
 
 #### Getting Started: 
 
