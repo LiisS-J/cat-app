@@ -1,35 +1,47 @@
 <%- include('../partials/header') %>
 
-    <div class="applicantForm">
+    <div class="form-content">
 
-        <h2>To ensure all our kitties get a home they need for a happy life, please fill out this application to your
+        <h1>Application Form</h1>
+
+        <p>To ensure all our kitties get a home they need for a happy life, please fill out this application to your
             best
             abilities
-        </h2>
+        </p>
 
         <form action="/cats/<%= cat._id %>/applicant" method="POST">
-            <label for="name">
-                Name:
-                <input type="text" name="name" required>
-            </label>
-            <label for="age">
-                Age:
-                <input type="number" name="age" required>
-            </label>
-            <label for="address">
-                Address:
-                <input type="text" name="address" required>
-            </label>
-            <label for="homereq">
-                Are you allowed to have cats in your residence?
-                <input type="text" name="homereq" required>
-            </label>
-            <label for="healthreq">
-                Are you prepared to meet your new kitties health needs?
-                <input type="text" name="healthreq" required>
-            </label>
+            <div>
+                <label for="name">
+                    <b>Name:</b>
+                    <input type="text" name="name" required>
+                </label>
+            </div>
+            <div>
+                <label for="age">
+                    <b>Age:</b>
+                    <input type="number" name="age" required>
+                </label>
+            </div>
+            <div>
+                <label for="address">
+                    <b>Address:</b>
+                    <input type="text" name="address" required>
+                </label>
+            </div>
+            <div>
+                <label for="homereq">
+                    <b>Are you allowed to have cats in your residence?</b>
+                    <input type="text" name="homereq" required>
+                </label>
+            </div>
+            <div>
+                <label for="healthreq">
+                    <b>Are you prepared to meet your new kitties health needs?</b>
+                    <input type="text" name="healthreq" required>
+                </label>
+            </div>
             <input type="submit" value="Submit Application">
         </form>
     </div>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

@@ -1,71 +1,88 @@
 <%- include('../partials/header') %>
 
-    <div class="singleCat">
+    <div class="main-content">
 
-        <h2>Meet <%= cat.name %>
-        </h2>
+        <div class="catImage"
+            style="background-image: url('<%= cat.imgUrl %>'); max-width: 200px; min-height: 200px; background-size: cover;">
+        </div>
+        <h1>
+            <%= cat.name %>
+        </h1>
+        <div class="catInfo">
+            <div>
+                <b>ID:</b>
+                <%= cat._id %>
+            </div>
+            <div>
+                <b>Name:</b>
+                <%= cat.name %>
+            </div>
+            <div>
+                <b>Sex:</b>
+                <%= cat.sex %>
+            </div>
+            <div>
+                <b>Age:</b>
+                <%= cat.age %>
+            </div>
+            <div>
+                <b>Breed:</b>
+                <%= cat.breed %>
+            </div>
+            <div>
+                <b>Health Condition:</b>
+                <%= cat.health %>
+            </div>
+            <div>
+                <b>Adoption Status:</b>
+                <%= cat.adoptionStatus %>
+            </div>
+        </div>
 
-        <section>
-            <div class="catImage"
-                style="background-image: url('<%= cat.imgUrl %>'); max-width: 250px; min-height: 250px; background-size: cover;">
+        <div class="editCatLink">
+            <a href="/cats/<%= cat._id %>/edit ">Edit Cat Entry</a>
+        </div>
+        <form method="POST" action="/cats/<%= cat._id %>?_method=DELETE">
+            <button type="submit">Delete Cat Entry</button>
+        </form>
+        
+        <div>
+            <h3>Applicants for this cat:<%= applicants.length %>
+            </h3>
+            <% applicants.forEach(function(applicant) { %>
+                <div>
+                    <b>Name:</b>
+                    <%= applicant.name %>
+                </div>
+                <div>
+                    <b>Age:</b>
+                    <%= applicant.age %>
+                </div>
+                <div>
+                    <b>Address:</b>
+                    <%= applicant.address %>
+                </div>
+                <div>
+                    <b>Meets housing requirements:</b>
+                    <%= applicant.homereq %>
+                </div>
+                <div>
+                    <b>Meets care requirements:</b>
+                    <%= applicant.healthreq %>
+                </div>
+                <form method="POST" action="/cats/<%= cat._id %>/applicant/<%= applicant._id%>?_method=DELETE">
+                    <button type="submit">Delete Applicant</button>
+                </form>
+                <% }); %>
+        </div>
+        <div class="linkAlign">
+            <div class="catLink">
+                <a href="/cats/<%= cat._id %>/adopt/new">Adopt Me!</a>
             </div>
-            <div>
-                ID: <%= cat._id %>
+            <div class="catLink">
+                <a href="/cats/">Back to main page</a>
             </div>
-            <div>
-                Name: <%= cat.name %>
-            </div>
-            <div>
-                Sex: <%= cat.sex %>
-            </div>
-            <div>
-                Age: <%= cat.age %>
-            </div>
-            <div>
-                Breed: <%= cat.breed %>
-            </div>
-            <div>
-                Health Condition: <%= cat.health %>
-            </div>
-            <div>
-                Adoption Status: <%= cat.adoptionStatus %>
-            </div>
-            <div>
-                <a href="/cats/<%= cat._id %>/edit ">Edit Cat Entry</a>
-            </div>
-            <form method="POST" action="/cats/<%= cat._id %>?_method=DELETE">
-                <button type="submit">Delete Cat Entry</button>
-            </form>
-            <div>
-                Applicants for this cat:
-                <%= applicants.length %>
-                    <% applicants.forEach(function(applicant) { %>
-                        <div>
-                            Name: <%= applicant.name %>
-                        </div>
-                        <div>
-                            Age: <%= applicant.age %>
-                        </div>
-                        <div>
-                            Address: <%= applicant.address %>
-                        </div>
-                        <div>
-                            Meets housing requirements: <%= applicant.homereq %>
-                        </div>
-                        <div>
-                            Meets care requirements: <%= applicant.healthreq %>
-                        </div>
-                        <form method="POST" action="/cats/<%= cat._id %>/applicant/<%= applicant._id%>?_method=DELETE">
-                            <button type="submit">Delete Applicant</button>
-                        </form>
-                        <% }); %>
-            </div>
-        </section>
-
-        <div id="adoptCat">
-            <a href="/cats/<%= cat._id %>/adopt/new">Adopt Me!</a>
-            <a href="/cats/">Back to main page</a>
         </div>
     </div>
 
-<%- include('../partials/header') %>
+    <%- include('../partials/header') %>

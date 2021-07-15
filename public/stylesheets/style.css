@@ -82,7 +82,7 @@ a:active {
     position: relative;
 }
 
-#meetCat {
+.meetCat {
     border: 1px solid black;
     width: fit-content;
     border-radius: 5px;
@@ -91,15 +91,110 @@ a:active {
     left: 40%;
 }
 
-#meetCat a {
+.meetCat a,
+.catLink a {
     color: #3AA6DD;
-    padding: 5px;
+    padding: 0px 5px;
 }
 
-#meetCat:hover {
+.meetCat:hover,
+.catLink:hover {
     background-color: #3AA6DD;
 }
 
-#meetCat a:hover {
+.meetCat a:hover,
+.catLink a:hover {
     color: white;
 }
+
+#addCat,
+.catLink,
+.editCatLink {
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+#addCat a {
+    color: red;
+    padding: 5px;
+}
+
+#addCat:hover {
+    background-color: red;
+}
+
+#addCat a:hover {
+    color: white;
+}
+
+h1 {
+    color: #3AA6DD;
+    text-align: center;
+}
+
+.mainCatPage {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 950px;
+    margin: 0px auto;
+}
+
+
+.main-content,
+.form-content {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+.catImage {
+    margin: 10px auto;
+}
+
+.catInfo {
+    border-left: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    color: red;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: inline;
+}
+
+button:hover {
+    color: white;
+    background-color: red;
+}
+
+.editCatLink a {
+    color: rgb(115, 187, 91);
+    padding: 0px 5px;
+}
+
+.editCatLink a:hover {
+    color: white;
+}
+
+.editCatLink:hover {
+    background-color: rgb(115, 187, 91);
+}
+
+.linkAlign {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.form-content div {
+    margin: 20px 0px;
+}
+
