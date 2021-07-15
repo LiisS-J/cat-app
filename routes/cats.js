@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const catsCtrl = require('../controllers/cats');
 
-// this route goes to the page that shows all adoptable cats
-
 router.get('/', catsCtrl.index);
 
 router.post('/', catsCtrl.create);
