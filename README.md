@@ -1,25 +1,25 @@
 # Happy Paws
 
-Happy Paws is a cat adoption site where applicants can view all cats currently up for adoption and fill out an application to adopt a cat. 
-The app also has an Admint functionality where the App's Admin has the ability to update cat details and delete a cat entry when the cat gets adopted.
+Happy Paws is a cat adoption app where applicants can view all cats currently up for adoption and apply to adopt a cat they like. They are able to access the cat's full details and also see how many other applicants the cat may have.
+Whileas not fully built out, the app also allows the administrator to update cat details and delete a cat entry when the cat gets adopted.
 
-![Landing Page sample image](imgs/mainScreenImg.png)
-![Single Cat's Detailed page's sample image](imgs/gamePlaySample.png)
-![Cat Application Form's sample image](imgs/gameOverMsg.png)
-
+![Landing Page](img/landing_page.png)
+![Cat database view](img/database_view.png)
+![Single Cat Detail page](img/single_cat_view.png)
+![Adoption form page](img/adoption_application.png)
 
 ####Technologies Used: 
-The whole game is built solely using JavaScript, HTML and CSS, although JavaScript does majority of the work.
+The app was built using HTML, CSS, Javascript, Node.js, Express, MongoDB and Mongoose
 
 #### Getting Started: 
 
-[CatApp](https://liiss-j.github.io/numbers-game/)
+[CatApp](https://cat-app-project-2.herokuapp.com/)  
 [CatApp project's Trello Board](https://trello.com/b/A0TD6I68/project-2-node-express-mongodb)
-
 
 
 ####Planned future enhancements:
 
-* The App should have a separate view for the Administrator that lets them manage all cat entries and applicant forms behind the scenes.
-* Setting up database so Administrator could add a photo for each cat
-* Add a donation feature where users could donate items in need to each cat
+* Create a separate view for the administrator that lets them manage all cat entries and applicant forms behind the scenes.
+* Adding a feature that stores all of the applicant's info when they adopt a cat, even after the cat entry is deleted.
+* Adding a donation feature where users could donate items cats are in need of.
+* Styling for a more polished look.
